@@ -41,3 +41,12 @@
 .rule-row small{margin-left:auto;color:var(--muted);font-size:9px}
 @media(max-width:900px){.step.open .step-content{max-height:800px}}
 @media(max-width:640px){.step.open .step-content{max-height:1050px}.workbook-guide p{display:block}.workbook-guide p span{display:block;margin-top:4px}.work-type-card .type-chips{grid-template-columns:1fr 1fr}.rule-row{flex-wrap:wrap}.rule-row small{width:100%;margin-left:54px}}
+
+/* Footer contact */
+.footer-contact{margin-left:auto;padding-left:34px;border-left:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:2px}
+.footer-contact span{font-size:8px;font-weight:700;letter-spacing:.16em;color:#78938b}
+.footer-contact a{font-size:12px;color:#d9e5e1;border-bottom:1px solid transparent;transition:border-color .25s,color .25s}
+.footer-contact a:hover,.footer-contact a:focus-visible{color:#fff;border-bottom-color:#a7cabe}
+.footer-inner .back-to-top{margin-left:20px}
+@media(max-width:760px){.footer-inner{flex-wrap:wrap}.footer-contact{order:3;width:100%;margin-left:0;padding:18px 0 0;border-left:0;border-top:1px solid rgba(255,255,255,.1)}.footer-inner .back-to-top{margin-left:auto}}
+@media(max-width:640px){.footer-contact{order:initial}.footer-inner .back-to-top{margin-left:0}}
