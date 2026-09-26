@@ -13,6 +13,13 @@ nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
   menuButton.setAttribute('aria-expanded', 'false');
 }));
 
+const backToTop = document.querySelector('.back-to-top');
+backToTop?.addEventListener('click', event => {
+  event.preventDefault();
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.scrollTo({ top: 0, left: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+});
+
 const featureData = {
   data: {
     count: '01 / 03', title: '엑셀 하나로<br>직원과 원티드 불러오기',
