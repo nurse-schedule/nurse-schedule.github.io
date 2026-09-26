@@ -3,3 +3,41 @@
 @media(max-width:900px){.main-nav{position:absolute;top:70px;left:18px;right:18px;background:var(--paper);box-shadow:0 15px 40px rgba(17,58,52,.16);padding:24px;display:none;flex-direction:column;align-items:stretch;gap:18px}.main-nav.open{display:flex}.menu-button{display:block}.menu-button span{display:block;width:23px;height:1px;background:var(--ink);margin:6px}.hero{padding-top:130px}.hero-grid{grid-template-columns:1fr}.hero-copy{text-align:center}.hero-text,.hero-proof{margin-left:auto;margin-right:auto}.hero-actions{justify-content:center}.hero-visual{max-width:680px;margin:20px auto 0;width:100%}.split-intro,.guide-head,.detail-grid{grid-template-columns:1fr;gap:35px}.intro-copy,.guide-head>p{padding-left:0;border-left:0}.section-heading{display:block}.section-heading>p:last-child{padding-left:0;margin-top:20px}.feature-panel{grid-template-columns:1fr;gap:35px}.feature-copy{max-width:600px}.detail-title{position:static}.metric-grid article{padding:35px 25px}.step-content,.step.open .step-content{grid-template-columns:1fr;gap:20px;padding-left:90px;padding-right:40px}.step.open .step-content{max-height:500px}}
 @media(max-width:640px){.nav-wrap,.hero-grid,.section-inner{padding-left:20px;padding-right:20px}.hero{min-height:auto;padding-bottom:100px}.hero h1{font-size:43px}.hero-text{font-size:16px}.hero-actions{flex-direction:column;gap:12px}.hero-proof{justify-content:center}.hero-proof div{padding:0 12px}.hero-proof strong{font-size:18px}.hero-proof span{font-size:9px}.app-window{transform:none}.window-body{min-height:310px}.mini-side{display:none}.schedule-area{width:100%;padding:19px 14px}.schedule-table th,.schedule-table td{padding:7px 2px}.floating-card{right:5px;bottom:-40px}.section{padding:85px 0}.section h2{font-size:38px}.metric-grid{grid-template-columns:1fr}.metric-grid article{min-height:260px}.feature-tabs{justify-content:space-between}.feature-tab{margin:0;padding-right:8px;gap:7px}.feature-panel{padding-top:35px}.feature-mock{padding:20px 14px}.staff-row{grid-template-columns:14px 28px 1fr repeat(3,20px) 32px}.step-toggle{grid-template-columns:48px 1fr 34px}.step-title{font-size:19px}.step-content,.step.open .step-content{padding-left:48px;padding-right:5px}.step.open .step-content{max-height:650px}.footer-inner{flex-direction:column;align-items:flex-start;gap:12px}.footer-inner>a{margin:0}.hero-scroll{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.site-header.scrolled{animation:none}}
+
+/* HOW TO USE — structured guide cards */
+.step.open .step-content{max-height:620px}
+.step-content p b{color:var(--ink)}
+.guide-points{list-style:none;padding:0;margin:22px 0 0}
+.guide-points li{position:relative;padding:0 0 17px 28px}
+.guide-points li:before{content:"✓";position:absolute;left:0;top:1px;width:17px;height:17px;border-radius:50%;background:#dcece4;color:var(--green);font-size:9px;font-weight:800;display:grid;place-items:center}
+.guide-points b,.guide-points span{display:block}
+.guide-points b{font-size:13px;margin-bottom:2px}
+.guide-points span{font-size:12px;color:var(--muted);line-height:1.65}
+.guide-points.compact li:first-child:before{content:"!";background:#f5dfda;color:#a85347}
+.guide-points.compact li:last-child:before{content:"△";background:#f4e8cf;color:#8d6728}
+.guide-card-label{display:block;font-size:8px;letter-spacing:.2em;color:var(--green);font-weight:800;margin-bottom:14px}
+.workbook-guide,.work-type-card,.rule-compare{background:white;border:1px solid #e1e7e3;padding:22px;align-self:start;box-shadow:0 10px 28px rgba(31,70,62,.05)}
+.workbook-guide{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.workbook-guide>.guide-card-label,.workbook-guide>p{grid-column:1/-1}
+.workbook-guide>div{background:var(--pale);padding:13px}
+.workbook-guide b,.workbook-guide small{display:block}
+.workbook-guide small{font-size:9px;color:var(--muted)}
+.workbook-guide p{margin:7px 0 0;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:11px}
+.workbook-guide p span{color:var(--muted)}
+.mapping-example{display:flex;align-items:center;gap:9px;margin-top:20px;padding:12px 14px;background:#edf3ee;font-size:11px}
+.mapping-example>span{font-size:8px;letter-spacing:.12em;color:var(--green);margin-right:auto}
+.mapping-example b{background:white;border:1px solid #d9e2dd;min-width:40px;text-align:center;padding:5px}
+.mapping-example i{font-style:normal;color:var(--green)}
+.mapping-example small{color:var(--muted)}
+.work-type-card .type-chips{display:grid;grid-template-columns:repeat(4,1fr)}
+.work-type-card p{font-size:11px;text-align:center;margin:16px 0 0}
+.rule-compare{display:grid;gap:9px}
+.rule-row{display:flex;align-items:center;gap:6px;padding:11px;background:#fafaf8}
+.rule-row em{font-style:normal;font-size:9px;font-weight:800;text-align:center;padding:5px;min-width:48px}
+.rule-row.danger em{background:#f2d9d4;color:#9b493e}
+.rule-row.caution em{background:#f3e5c8;color:#8a6425}
+.rule-row span{width:30px;height:30px;background:white;border:1px solid #dce3df;display:grid;place-items:center;font-size:11px;font-weight:800;flex:0 0 auto}
+.rule-row b{font-size:10px;color:#96a39e}
+.rule-row small{margin-left:auto;color:var(--muted);font-size:9px}
+@media(max-width:900px){.step.open .step-content{max-height:800px}}
+@media(max-width:640px){.step.open .step-content{max-height:1050px}.workbook-guide p{display:block}.workbook-guide p span{display:block;margin-top:4px}.work-type-card .type-chips{grid-template-columns:1fr 1fr}.rule-row{flex-wrap:wrap}.rule-row small{width:100%;margin-left:54px}}
